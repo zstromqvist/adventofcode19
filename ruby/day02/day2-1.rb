@@ -1,8 +1,12 @@
 
-array = File.read("test1.txt").split(",").map(&:to_i)
+array = File.read("input1.txt").split(",").map(&:to_i)
 
 iter = 0
 super_pos = 0
+
+# transformations before run
+array[1] = 12
+array[2] = 2
 
 while super_pos != 99 do
     
@@ -26,4 +30,4 @@ while super_pos != 99 do
     iter += 4
 end
 
-pp array
+pp array[0]
