@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-result = 0
+input = 1969
 
 def mass_recursion(number)
     total = (number / 3) - 2
@@ -12,11 +12,4 @@ def mass_recursion(number)
     total
 end
 
-File.foreach("input.txt") { 
-    |line| 
-
-    input = line.to_i
-    result += mass_recursion(input)
-}
-
-puts result
+pp mass_recursion(input)

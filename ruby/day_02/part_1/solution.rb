@@ -1,5 +1,5 @@
 
-array = File.read("input1.txt").split(",").map(&:to_i)
+array = File.read("input.txt").split(",").map(&:to_i)
 
 iter = 0
 super_pos = 0
