@@ -1,15 +1,19 @@
 #!/usr/bin/env ruby
 
-input = 1969
-
-def mass_recursion(number)
-    total = (number / 3) - 2
-
-    if total > 0 && mass_recursion(total) > 0
-        total += mass_recursion(total)
-    end
-
-    total
+def add_two(array)
+    array << 2
+    pp array.object_id
 end
 
-pp mass_recursion(input)
+a = [0,1]
+
+b = a.dup
+c = a.clone
+
+add_two(a)
+add_two(b)
+add_two(c)
+pp a, b, c
+pp a.object_id
+pp b.object_id
+pp c.object_id
